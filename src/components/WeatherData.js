@@ -4,7 +4,7 @@ import WeatherExtraInfo from './WeatherExtraInfo';
 import { CLOUD} from './../constants/weathers';
 
 const WeatherData = () => (
-  <div>
+  <div className="wt-data">
     <WeatherTemperature temperature={20} weatherState= {CLOUD}/>
     <WeatherExtraInfo humidity={80} wind={'10m/s'}/>
   </div>
