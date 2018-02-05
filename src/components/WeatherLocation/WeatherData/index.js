@@ -2,7 +2,7 @@ import React from 'react';
 import WeatherTemperature from './WeatherTemperature';
 import WeatherExtraInfo from './WeatherExtraInfo';
 import { CLOUD } from './../../../constants/weathers';
-import './styles.css';
+import './weather_data.css';
 
 const WeatherData = () => (
   <div className="wt-data">
