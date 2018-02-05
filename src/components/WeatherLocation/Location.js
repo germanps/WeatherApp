@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './weather_location.css';
 
 const Location = ({ city }) => (
     <div className="wt-title">

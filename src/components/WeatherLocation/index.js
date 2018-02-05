@@ -1,6 +1,7 @@
 import React from 'react';
 import Location from './Location';
 import WeatherData from './WeatherData';
+import './weather_location.css';
 
 
 const WeatherLocation = () => (
