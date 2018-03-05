@@ -25,7 +25,12 @@ class WeatherLocation extends Component{
   }
 
   handleUpdateClick = () => {
-    fetch(api_weather);
+    fetch(api_weather).then( data => {
+      console.log(data);
+      return data.json();
+    }).then( weather_data => {
+      console.log(weather_data);
+    });
     /* this.setState({
       data: data2
     }); */
