@@ -2,18 +2,11 @@ import React, { Component } from 'react';
 import Location from './Location';
 import WeatherData from './WeatherData';
 import transformWeather from './../../services/transformWeather';
-import { SUN } from './../../constants/weathers';
 import './weather_location.css';
 
 const location = "Sant Cugat del Valles, ES";
 const api_key = "4af7f8fc3c632f3a83020599a9af7fc1";
 const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${api_key}`;
-const data1 = {
-  temperature: 18.5,
-  weatherState: SUN,
-  humidity: 5,
-  wind: '20m/s',
-};
 
 class WeatherLocation extends Component{ 
 
@@ -21,26 +14,24 @@ class WeatherLocation extends Component{
     super();
     this.state = {
       city: 'Sant Cugat',
-      data: data1
+      data: null
     }
     console.log("constructor");
   }
 
-  handleUpdateClick = () => {
-    fetch(api_weather).then( data => {
-      console.log(data);
+  handleUpdate = () => {
+    fetch(api_weather).then( data => {;
       return data.json();
-    }).then( weather_data => {
+    }).then( weather_data  => {
       const data = transformWeather(weather_data);
       this.setState({ data: data });
-      console.log(weather_data);
     });
-    console.log("Actualizado!");
   }
 
   //Solo se ejecutará una vez (podriamos poner cualquier inizialización del componente)
   componentWillMount(){
-    console.log("componentWillMount");
+    //inicializamos con los datos que vienen de la api
+    this.handleUpdate();
   }
 
   //Se ejecuta después del render
@@ -64,8 +55,7 @@ class WeatherLocation extends Component{
     return (
       <div className="wt-location">
         <Location city={ city }/>
-        <WeatherData data={ data }/>
-        <button onClick={this.handleUpdateClick}>Actualizar</button>
+        {data ? <WeatherData data={ data }/> : <h4>Cargando datos...</h4>}
       </div>
     );
   }
