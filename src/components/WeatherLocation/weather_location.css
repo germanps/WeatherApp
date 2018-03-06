@@ -11,3 +11,20 @@
 .wt-location .wt-title h1{
   margin: 0;
 }
+.wt-location button{
+  font-family: 'Montserrat', sans-serif;
+  padding: .5rem 2rem;
+  display: inline-block;
+  border: 2px solid #d6d8d8;
+  background: transparent;
+  color: #919191;
+  cursor: pointer;
+  transition: .4s ease all;
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+.wt-location button:hover{
+  background-color: seagreen;
+  color: #fff;
+  border: 2px solid seagreen;
+}

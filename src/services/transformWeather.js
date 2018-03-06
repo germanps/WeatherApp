@@ -2,7 +2,7 @@ import convert from 'convert-units';
 import { SUN } from './../constants/weathers';
 
 const getTemp = kelvin => {
-  return convert(kelvin).from('K').to('C').toFixed(1);
+  return Number(convert(kelvin).from('K').to('C').toFixed(1));
 }
 const getWeatherState = (weather) => {
   return SUN;
@@ -11,6 +11,7 @@ const getWeatherState = (weather) => {
 const transformWeather = weather_data => {
   const { humidity, temp } = weather_data.main;
   const { speed } = weather_data.wind;
+  const { main } = weather_data.weather;
   const weatherState = getWeatherState(this.weather);
   const temperature = getTemp(temp);
   const data = {
@@ -18,6 +19,7 @@ const transformWeather = weather_data => {
     temperature,
     weatherState,
     wind: `${speed} m/s`,
+    icon: main,
   }
   return data;
 }
