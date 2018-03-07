@@ -17,6 +17,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "convert-units": "^2.3.4"
+    "convert-units": "^2.3.4",
+    "material-ui": "^0.20.0"
   }
 }

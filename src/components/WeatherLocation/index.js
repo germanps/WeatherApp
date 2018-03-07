@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import CircularProgress from 'material-ui/CircularProgress';
 import Location from './Location';
 import WeatherData from './WeatherData';
 import transformWeather from './../../services/transformWeather';
 import './weather_location.css';
 
-const location = "Sant Cugat del Valles, ES";
+const location = "Barcelona, ES";
 const api_key = "4af7f8fc3c632f3a83020599a9af7fc1";
 const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${api_key}`;
 
@@ -13,7 +14,7 @@ class WeatherLocation extends Component{
   constructor(){
     super();
     this.state = {
-      city: 'Sant Cugat',
+      city: 'Barcelona',
       data: null
     }
     console.log("constructor");
@@ -55,7 +56,7 @@ class WeatherLocation extends Component{
     return (
       <div className="wt-location">
         <Location city={ city }/>
-        {data ? <WeatherData data={ data }/> : <h4>Cargando datos...</h4>}
+        {data ? <WeatherData data={ data }/> : <CircularProgress size={60} thickness={7} />}
       </div>
     );
   }
