@@ -1,0 +1,8 @@
+.wt-location-list{
+  width: 100%;
+  max-width: 1060px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}

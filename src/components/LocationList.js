@@ -1,10 +1,11 @@
 import React from 'react';
 import WeateherLocation from './WeatherLocation';
+import './location_list.css';
 
 const LocationList = () => (
-  <div>
+  <div className="wt-location-list">
     <WeateherLocation city={"Barcelona,es"} />
-    <WeateherLocation city={"Paris,fr"} />
+    <WeateherLocation city={"Moscow,ru"} />
     <WeateherLocation city={"New York,usa"} />
   </div>
 );

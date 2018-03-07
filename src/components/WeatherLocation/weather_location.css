@@ -1,6 +1,6 @@
 .wt-location{
-  width: 420px;
-  margin: 2rem auto;
+  width: 320px;
+  margin: 2rem 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -10,7 +10,7 @@
 }
 .wt-location .wt-title h1{
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .wt-location button{
   font-family: 'Montserrat', sans-serif;
