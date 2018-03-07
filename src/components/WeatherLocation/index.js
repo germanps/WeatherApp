@@ -6,8 +6,9 @@ import transformWeather from './../../services/transformWeather';
 import './weather_location.css';
 
 const location = "Barcelona, ES";
+const url = "http://api.openweathermap.org/data/2.5/weather";
 const api_key = "4af7f8fc3c632f3a83020599a9af7fc1";
-const api_weather = `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=${api_key}`;
+const api_weather = `${url}?q=${location}&APPID=${api_key}`;
 
 class WeatherLocation extends Component{ 
 
