@@ -4,8 +4,8 @@ import './location_list.css';
 
 const LocationList = () => (
   <div className="wt-location-list">
-    <WeateherLocation city={"Barcelona,es"} />
-    <WeateherLocation city={"Moscow,ru"} />
+    <WeateherLocation city={"Sao Paulo,br"} />
+    <WeateherLocation city={"Montreal,can"} />
     <WeateherLocation city={"New York,usa"} />
   </div>
 );

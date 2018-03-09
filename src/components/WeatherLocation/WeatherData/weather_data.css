@@ -20,11 +20,11 @@
   color: tomato;
 }
 .wt-temperature .wt-temperature-temp{
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
-  padding-left: 1rem;
+  padding-left: .5rem;
   color: #333;
-}
+} 
 .wt-temperature .wt-temperature-type{
   font-weight: bold;
   color: #444;
